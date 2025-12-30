@@ -1,0 +1,21 @@
+<div class="navbar">
+  <strong>User Management</strong>
+  <div>
+    <a routerLink="/admin-dashboard">Dashboard</a>
+    <button (click)="logout()">Logout</button>
+  </div>
+</div>
+
+<table border="1" width="100%">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.role }}</td>
+  </tr>
+</table>
